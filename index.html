@@ -9,50 +9,13 @@
       type="image/x-icon"
       href="https://britannia.edu.bd/images/favicon.png"
     />
+    <!-- flowbite -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"
       rel="stylesheet"
     />
-
-    <style>
-      /* Banner */
-      .banner {
-        z-index: -1;
-      }
-
-      /* Tab */
-      .tabs {
-        width: 100%;
-        border: 1px solid #ddd;
-      }
-
-      .tab-header {
-        display: flex;
-        justify-content: flex-start;
-      }
-
-      .tab-button {
-        padding: 10px 15px;
-        background-color: #f0f0f0;
-        border: none;
-        border-bottom: 1px solid #ddd;
-        cursor: pointer;
-      }
-
-      .tab-button.active {
-        background-color: #fff;
-        border-bottom: 2px solid #333;
-      }
-
-      .tab-pane {
-        display: none;
-        padding: 20px;
-      }
-
-      .tab-pane.active {
-        display: block;
-      }
-    </style>
+    <!-- custom style -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body style="margin: auto; max-width: 1280px">
     <header>
@@ -125,7 +88,7 @@
                   <!-- Library Services Toggle menu -->
                   <div
                     id="libraryServicesToggle"
-                    class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                    class="hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
                   >
                     <ul
                       class="py-2 text-sm text-gray-700 dark:text-gray-400"
@@ -160,7 +123,7 @@
                   <button
                     id="eLibrary"
                     data-dropdown-toggle="eLibraryToggle"
-                    class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                    class="navToggle flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                   >
                     E-Library
                     <svg
@@ -867,7 +830,7 @@
             <img
               id="bannerItem1"
               src="https://assets.website-files.com/604a97c70aee09eed25ce991/61897a35583a9b51db018d3e_MartinPublicSeating-97560-Importance-School-Library-blogbanner1.jpg"
-              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-0"
               alt="..."
             />
           </div>
@@ -901,8 +864,9 @@
         </div>
         <!-- Slider controls -->
         <button
+          id="buttonOne"
           type="button"
-          class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none hidden"
           data-carousel-prev
         >
           <span
@@ -927,8 +891,9 @@
           </span>
         </button>
         <button
+          id="buttonTwo"
           type="button"
-          class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none hidden"
           data-carousel-next
         >
           <span
@@ -958,24 +923,176 @@
 
     <main>
       <!-- Tab Start -->
-      <div class="tabs">
-        <div class="tab-header">
-          <button class="tab-button active" data-tab="tab1">Tab 1</button>
-          <button class="tab-button" data-tab="tab2">Tab 2</button>
-          <button class="tab-button" data-tab="tab3">Tab 3</button>
+      <div class="tabs rounded-lg mt-4 max-w-2xl mx-auto px-5">
+        <div class="tab-header flex justify-center m-4">
+          <button
+            class="tab-button inline-block px-4 py-3 text-black rounded-lg active"
+            data-tab="tab1"
+          >
+            Library Catalog
+          </button>
+          <button
+            class="tab-button inline-block px-4 py-3 text-black rounded-lg"
+            data-tab="tab2"
+          >
+            Google Search
+          </button>
+          <button
+            class="tab-button inline-block px-4 py-3 text-black rounded-lg"
+            data-tab="tab3"
+          >
+            Google Scholar
+          </button>
         </div>
         <div class="tab-content">
           <div id="tab1" class="tab-pane active">
-            <h2>Tab 1 Content</h2>
-            <p>This is the content for Tab 1.</p>
+            <form></form>
+              <label
+                for="default-search"
+                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                >Search</label
+              >
+              <div class="relative">
+                <div class="flex flex-row md:flex-col">
+                  <select
+                    id="Category"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-l-lg md:rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  >
+                    <option selected>Library Catalog</option>
+                    <option value="title">Title</option>
+                    <option value="author">Author</option>
+                    <option value="subject">Subject</option>
+                    <option value="isbn">ISBN</option>
+                    <option value="series">Series</option>
+                    <option value="Call Number">Call Number</option>
+                  </select>
+
+                  <input
+                    type="search"
+                    id="default-search"
+                    class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-r-lg md:rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Search.."
+                    required
+                  />
+                  <button
+                    type="submit"
+                    class="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      ></path>
+                    </svg>
+                    <span class="sr-only">Search</span>
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
           <div id="tab2" class="tab-pane">
-            <h2>Tab 2 Content</h2>
-            <p>This is the content for Tab 2.</p>
+            <form
+              action="https://www.google.com/search"
+              method="GET"
+              target="_blank"
+            >
+              <label
+                for="default-search"
+                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                >Search</label
+              >
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  id="default-search"
+                  name="q"
+                  class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Search Google"
+                  required
+                />
+                <button
+                  type="submit"
+                  class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
           </div>
           <div id="tab3" class="tab-pane">
-            <h2>Tab 3 Content</h2>
-            <p>This is the content for Tab 3.</p>
+            <form
+              action="https://scholar.google.com/scholar"
+              method="GET"
+              target="_blank"
+            >
+              <label
+                for="default-search"
+                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                >Search</label
+              >
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  id="default-search"
+                  name="q"
+                  class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Search Google Scholar"
+                  required
+                />
+                <button
+                  type="submit"
+                  class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -1171,6 +1288,16 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
   </body>
+  <script>
+    // Function to click the button
+    function clickButton() {
+      var button = document.getElementById("buttonTwo");
+      button.click();
+    }
+
+    // Auto-click the button every 5 seconds
+    setInterval(clickButton, 10000);
+  </script>
   <script>
     // Get all tab buttons
     const tabButtons = document.querySelectorAll(".tab-button");
