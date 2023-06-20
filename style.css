@@ -2,37 +2,21 @@
 .banner {
   z-index: -1;
 }
-
 /* Banner End */
 
-/* Tab */
+/* Search Tab */
 .tabs {
   border: 1px solid #ddd;
   background-color: rgba(254, 252, 252, 0.8);
 }
-
-/* .tab-header {
-    display: flex;
-    justify-content: flex-start;
-  } */
-
-.tab-button {
-  /* padding: 10px 15px;
-    background-color: #f0f0f0;
-    border: none;
-    border-bottom: 1px solid #ddd;
-    cursor: pointer; */
-}
-
 .tab-button.active {
   border-bottom: black solid 1px;
 }
-
 .tab-pane {
   display: none;
   padding: 20px;
 }
-
 .tab-pane.active {
   display: block;
 }
+/* Search Tab End */
