@@ -1617,9 +1617,9 @@
       <!-- E-Books End ---------------------------------------------------------------------->
 
       <!-- Services & Info ------------------------------------------------------------------>
-      <section class="grid lg:grid-cols-3 gap-6 my-6">
+      <section class="grid lg:grid-cols-3 gap-6 my-6 ">
         <!-- service & Resources -->
-        <div class="services col-span-2 flex flex-row justify-between">
+        <div class="services col-span-2 flex flex-row justify-between rounded-lg ">
           <div class="Content flex flex-col">
             <h3 class="title text-lg m-4">Resources</h3>
             <a class="py-4 px-6 text-sm" target="_blank" href=""
@@ -1742,28 +1742,30 @@
       <!-- Services & Info End -------------------------------------------------------------->
 
       <!-- Video & About -------------------------------------------------------------->
-      <section>
-        <a
-          href="#"
-          class="flex flex-col min-w-full items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+      <section
+      class="rounded-lg "
+        style="
+          background-image: url('https://imgmedia.lbb.in/media/2020/03/5e6fa0adcdf431136ea4aeb9_1584373933388.jpg');
+        "
+      >
+        <div
+          class="flex flex-col min-w-full items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row dark:border-gray-700 dark:bg-gray-800"
+          style="background-color: #1e2159; opacity: 0.9;"
         >
           <iframe
-            class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-            width="560"
-            height="315"
+            class="object-cover w-full rounded-t-lg h-96 md:rounded-none md:rounded-l-lg"
+            style="opacity: none;"
             src="https://www.youtube.com/embed/JiGkIosxisI"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
-          <div class="flex flex-col justify-between p-4 leading-normal">
-            <h5
-              class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white"
-            >
+          <div class="flex flex-col justify-between p-4 leading-normal h-full">
+            <h5 class="mb-2 text-lg font-bold tracking-tight text-white">
               About Us
             </h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <p class="mb-3 font-normal text-white">
               The purpose of the library is to support academic and research
               activities. The library fulfils its mission by Fulfilling the
               course-related needs of undergraduates, Meeting the scholarly
@@ -1772,7 +1774,7 @@
               lot more.
             </p>
           </div>
-        </a>
+        </div>
       </section>
       <!-- Video & About End-------------------------------------------------------------->
     </main>

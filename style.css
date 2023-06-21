@@ -152,6 +152,7 @@ color: green;
 
 .services .Content {
   background-color: #1e2159;
+  border-radius: 2%;
   opacity: 0.90;
 }
 .services .Content h3 {
