@@ -1161,8 +1161,8 @@
       </section>
       <!-- Search Tab End ------------------------------------------------------------------->
 
-      <!-- Notice, Message & Calender --------------------------------------------------------------------------->
-      <section class="mt-20">
+      <!-- Notice, Message &( Calender & info)--------------------------------------------------------------------------->
+      <section class="mt-6">
         <div class="grid lg:grid-cols-3 lg:gap-4">
           <!-- Notice -->
           <div class="flex flex-col justify-between items-center px-4">
@@ -1486,7 +1486,7 @@
               </div>
             </div>
           </div>
-          <!-- calender -->
+          <!-- calender & Info-->
           <div class="wrapper">
             <h2 class="text-center font-semibold text-2xl">Calender</h2>
             <div
@@ -1521,34 +1521,23 @@
                 <select id="year" onchange="jump()"></select>
               </div>
             </div>
-
-            <!-- contact -->
+            <!-- Info -->
             <div
-              class="max-w-sm p-6 my-4 bg-white border border-gray-200 rounded-lg shadow"
+              class="min-w-full p-6 my-4 bg-white border border-gray-200 rounded-lg shadow"
             >
               <a href="#">
                 <h5
                   class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white"
                 >
-                  Ask The Library
+                  Library Hours
                 </h5>
               </a>
               <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                <span style="color: red">Need Help?</span>
-                <br />
-                <samp style="color: chocolate">Contact</samp><br />
-                <samp
-                  >Tel:
-                  <span style="color: rgb(168, 101, 232)"
-                    >01999958037</span
-                  ></samp
-                >
-                <br />
-                <samp>e-mail:</samp><br />
-                <samp style="color: rgb(136, 136, 243)">
-                  librarian@britannia.edu.bd <br />
-                  librarian@britannia.edu.bd</samp
-                >
+                <samp style="color: green">Sunday to Friday</samp>
+                <samp>(9:00 am - 5:00 pm)</samp><br />
+                <samp style="color: green">Lunch & Prayer break</samp>
+                <samp>(1.00pm - 2.00 pm)</samp><br />
+                <samp style="color: red">Closed on Holidays</samp>
               </p>
             </div>
           </div>
@@ -1617,9 +1606,11 @@
       <!-- E-Books End ---------------------------------------------------------------------->
 
       <!-- Services & Info ------------------------------------------------------------------>
-      <section class="grid lg:grid-cols-3 gap-6 my-6 ">
+      <section class="grid lg:grid-cols-3 gap-6 my-6">
         <!-- service & Resources -->
-        <div class="services col-span-2 flex flex-row justify-between rounded-lg ">
+        <div
+          class="services col-span-2 flex flex-row justify-between rounded-lg"
+        >
           <div class="Content flex flex-col">
             <h3 class="title text-lg m-4">Resources</h3>
             <a class="py-4 px-6 text-sm" target="_blank" href=""
@@ -1662,27 +1653,9 @@
             >
           </div>
         </div>
-        <div class="">
-          <div
-            class="min-w-full p-6 my-4 bg-white border border-gray-200 rounded-lg shadow"
-          >
-            <a href="#">
-              <h5
-                class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white"
-              >
-                Library Hours
-              </h5>
-            </a>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              <samp style="color: green">Sunday to Friday</samp>
-              <samp>(9:00 am - 5:00 pm)</samp><br />
-              <samp style="color: green">Lunch & Prayer break</samp>
-              <samp>(1.00pm - 2.00 pm)</samp><br />
-              <samp style="color: red">Closed on Holidays</samp>
-            </p>
-          </div>
 
-          <!-- Ingo -->
+        <!-- Info -->
+        <div>
           <div
             class="min-w-full p-6 my-4 bg-white border border-gray-200 rounded-lg shadow"
           >
@@ -1737,24 +1710,52 @@
               >
             </p>
           </div>
+
+          <div
+            class="min-w-full p-6 my-4 bg-white border border-gray-200 rounded-lg shadow"
+          >
+            <a href="#">
+              <h5
+                class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                Ask The Library
+              </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              <span style="color: red">Need Help?</span>
+              <br />
+              <samp style="color: chocolate">Contact</samp><br />
+              <samp
+                >Tel:
+                <span style="color: rgb(168, 101, 232)">01999958037</span></samp
+              >
+              <br />
+              <samp>e-mail:</samp><br />
+              <samp style="color: rgb(136, 136, 243)">
+                <a href="mailto:librarian@britannia.edu.bd">
+                  librarian@britannia.edu.bd</a
+                >
+              </samp>
+            </p>
+          </div>
         </div>
       </section>
       <!-- Services & Info End -------------------------------------------------------------->
 
       <!-- Video & About -------------------------------------------------------------->
       <section
-      class="rounded-lg "
+        class="rounded-lg"
         style="
           background-image: url('https://imgmedia.lbb.in/media/2020/03/5e6fa0adcdf431136ea4aeb9_1584373933388.jpg');
         "
       >
         <div
           class="flex flex-col min-w-full items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row dark:border-gray-700 dark:bg-gray-800"
-          style="background-color: #1e2159; opacity: 0.9;"
+          style="background-color: #1e2159; opacity: 0.9"
         >
           <iframe
             class="object-cover w-full rounded-t-lg h-96 md:rounded-none md:rounded-l-lg"
-            style="opacity: none;"
+            style="opacity: none"
             src="https://www.youtube.com/embed/JiGkIosxisI"
             title="YouTube video player"
             frameborder="0"
