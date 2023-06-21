@@ -936,7 +936,7 @@
     <main>
       <!-- Search Tab Start -->
       <section>
-        <div class="tabs rounded-lg mt-4 max-w-2xl mx-auto px-5">
+        <div class="tabs rounded-lg mt-4 max-w-2xl mx-auto px-5 mb-6">
           <div class="tab-header flex justify-center m-4">
             <button
               class="tab-button inline-block px-4 py-3 text-black rounded-lg active"
@@ -1114,9 +1114,9 @@
 
       <!-- Notice --------------------------------------------------------------------------->
       <section class="mt-20">
-        <div class="grid grid-cols-3 gap-4">
-          <div>
-            <h2 class="text-center font-semibold text-5xl">Notice</h2>
+        <div class="grid lg:grid-cols-3 lg:gap-4">
+          <div class="flex flex-col">
+            <h2 class="text-center font-semibold text-2xl">Notice</h2>
             <marquee
               direction="up"
               onmouseover="this.stop()"
@@ -1129,10 +1129,10 @@
                 <div class="post">
                   <a
                     href="#"
-                    class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+                    class="block max-w-sm p-6 bg-white border border-gray-200 bg-gray-50 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
                   >
                     <h5
-                      class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                      class="mb-2 text-lg font-semibold tracking-tight text-gray-900 dark:text-white"
                     >
                       MAY 2/23 Notice from the Hon'ble Chairman, BoT
                     </h5>
@@ -1142,10 +1142,10 @@
                 <div class="post">
                   <a
                     href="#"
-                    class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+                    class="block max-w-sm p-6 bg-white border border-gray-200 bg-gray-50 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
                   >
                     <h5
-                      class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                      class="mb-2 text-lg font-semibold tracking-tight text-gray-900 dark:text-white"
                     >
                       MAY 2/23 Notice from the Hon'ble Chairman, BoT
                     </h5>
@@ -1155,10 +1155,10 @@
                 <div class="post">
                   <a
                     href="#"
-                    class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+                    class="block max-w-sm p-6 bg-white border border-gray-200 bg-gray-50 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
                   >
                     <h5
-                      class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                      class="mb-2 text-lg font-semibold tracking-tight text-gray-900 dark:text-white"
                     >
                       MAY 2/23 Notice from the Hon'ble Chairman, BoT
                     </h5>
@@ -1168,8 +1168,254 @@
             </marquee>
           </div>
           <div>
-            
+            <div
+              class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+            >
+              <ul
+                class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 rounded-t-lg bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:bg-gray-800"
+                id="defaultTab"
+                data-tabs-toggle="#defaultTabContent"
+                role="tablist"
+              >
+                <li class="mr-2">
+                  <button
+                    id="about-tab"
+                    data-tabs-target="#about"
+                    type="button"
+                    role="tab"
+                    aria-controls="about"
+                    aria-selected="true"
+                    class="inline-block p-4 text-blue-600 rounded-tl-lg hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-blue-500"
+                  >
+                    About BU Library
+                  </button>
+                </li>
+                <li class="mr-2">
+                  <button
+                    id="services-tab"
+                    data-tabs-target="#services"
+                    type="button"
+                    role="tab"
+                    aria-controls="services"
+                    aria-selected="false"
+                    class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  >
+                    Vice Chancellor's Message
+                  </button>
+                </li>
+                <li class="mr-2">
+                  <button
+                    id="statistics-tab"
+                    data-tabs-target="#statistics"
+                    type="button"
+                    role="tab"
+                    aria-controls="statistics"
+                    aria-selected="false"
+                    class="inline-block p-4 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                  >
+                    Librarian's Message
+                  </button>
+                </li>
+              </ul>
+              <div id="defaultTabContent">
+                <!-- One -->
+                <div
+                  class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800"
+                  id="about"
+                  role="tabpanel"
+                  aria-labelledby="about-tab"
+                >
+                  <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                  >
+                    <a href="#">
+                      <img
+                        class="rounded-t-lg"
+                        src="https://t3.ftcdn.net/jpg/04/77/87/44/360_F_477874414_kSQ9ip26804g8B3ItYsh5XsjNRgqf693.jpg"
+                        alt=""
+                      />
+                    </a>
+                    <div class="p-5">
+                      <a href="#">
+                        <h5
+                          class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center"
+                        >
+                          BRITANNIA UNIVERSITY LIBRARY
+                        </h5>
+                      </a>
+                      <p
+                        class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-center"
+                      >
+                        Campus Paduar Bazar, Bishwa Road, Comilla
+                      </p>
+                      <p
+                        class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+                      >
+                        The aim of Britannia University Library is to provide
+                        supplemental support to the students’ need via text
+                        books, periodicals and other materials. Students can
+                        check out books or to spend time in the library in
+                        connection with study and research.
+                      </p>
+                      <a
+                        href="#"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                      >
+                        Read more
+                        <svg
+                          aria-hidden="true"
+                          class="w-4 h-4 ml-2 -mr-1"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Two -->
+                <div
+                  class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800"
+                  id="services"
+                  role="tabpanel"
+                  aria-labelledby="services-tab"
+                >
+                  <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                  >
+                    <a href="#">
+                      <img
+                        class="rounded-t-lg"
+                        src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg"
+                        alt=""
+                      />
+                    </a>
+                    <div class="p-5">
+                      <a href="#">
+                        <h5
+                          class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center"
+                        >
+                          PROF. DR. SURAJIT SARBABIDYA
+                        </h5>
+                      </a>
+                      <p
+                        class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-center"
+                      >
+                        Vice Chancellor (In-Charge)
+                      </p>
+                      <p
+                        class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+                      >
+                        The Britannia University (BU) Library Perspective needs
+                        to contribute to the intellectual work of the university
+                        to strengthen our learning process and innovation.
+                        Meanwhile, the mission of the BU Library is to support
+                        the University's goal of contributing to society by
+                        expanding the services and resources of experts to meet
+                        the needs of the world-class library and information
+                        services university community and to enable education
+                        and research at the international level.
+                      </p>
+                      <a
+                        href="#"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                      >
+                        Read more
+                        <svg
+                          aria-hidden="true"
+                          class="w-4 h-4 ml-2 -mr-1"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- three -->
+                <div
+                  class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800"
+                  id="statistics"
+                  role="tabpanel"
+                  aria-labelledby="statistics-tab"
+                >
+                  <div
+                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                  >
+                    <a href="#">
+                      <img
+                        class="rounded-t-lg"
+                        src="https://expertphotography.b-cdn.net/wp-content/uploads/2020/08/social-media-profile-photos-3.jpg"
+                        alt=""
+                      />
+                    </a>
+                    <div class="p-5">
+                      <a href="#">
+                        <h5
+                          class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white text-center"
+                        >
+                          LIBRARIAN
+                        </h5>
+                      </a>
+                      <p
+                        class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-center"
+                      >
+                        Head of Library
+                      </p>
+                      <p
+                        class="mb-3 font-normal text-gray-700 dark:text-gray-400"
+                      >
+                        Welcome to the Britannia University Library. The
+                        Library's website is our gateway to our resources and
+                        services. The library website aims to provide a brief
+                        introduction to the facilities and services provided by
+                        the library, library operating hours and other basic
+                        information pertaining to the library. The primary
+                        objective of library is to implement, enrich, and
+                        support the educational programs of Britannia
+                        University.
+                      </p>
+                      <a
+                        href="#"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                      >
+                        Read more
+                        <svg
+                          aria-hidden="true"
+                          class="w-4 h-4 ml-2 -mr-1"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          
+          
+            
         </div>
       </section>
       <!-- Notice End ----------------------------------------------------------------------->
