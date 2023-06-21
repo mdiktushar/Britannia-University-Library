@@ -935,8 +935,8 @@
 
     <main>
       <!-- Search Tab Start -->
-      <section class="rounded-lg flex justify-between" style="background-color: rgb(254, 252, 250); min-height: 250px;">
-        <div class="tabs rounded-lg mt-4 max-w-2xl mx-auto px-5 mb-6">
+      <section class="rounded-lg" style="min-height: 250px">
+        <div class="tabs rounded-lg mt-4 min-w-full mx-auto px-5 mb-6">
           <div class="tab-header flex justify-center m-4">
             <button
               class="tab-button inline-block px-4 py-3 text-black rounded-lg active"
@@ -1113,17 +1113,17 @@
       <!-- Search Tab End ------------------------------------------------------------------->
 
       <!-- Notice, Message & Calender --------------------------------------------------------------------------->
-      <section class="mt-20" style="background-color: rgb(254, 252, 250);">
+      <section class="mt-20">
         <div class="grid lg:grid-cols-3 lg:gap-4">
           <!-- Notice -->
-          <div class="flex flex-col px-4">
-            <h2 class="text-center font-semibold text-2xl">Notice</h2>
+          <div class="flex flex-col justify-between items-center px-4">
+            <h2 class="font-semibold text-2xl">Notice</h2>
             <marquee
               direction="up"
               onmouseover="this.stop()"
               onmouseout="this.start()"
               scrollamount="5"
-              class="max-w-sm max-h-16 border rounded-lg p-2 "
+              class="max-w-sm flex-1 max-h-16 border rounded-lg p-2"
             >
               <!-- start content -->
               <div id="content">
@@ -1227,11 +1227,11 @@
                   id="about"
                   role="tabpanel"
                   aria-labelledby="about-tab"
-                  style="background-color: rgb(254, 252, 250);"
+                  style="background-color: rgb(254, 252, 250)"
                 >
                   <div
-                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                    style="background-color: rgb(254, 252, 250);"
+                    class="max-w-sm bg-white mx-auto border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                    style="background-color: rgb(254, 252, 250)"
                   >
                     <a href="#">
                       <img
@@ -1290,11 +1290,11 @@
                   id="services"
                   role="tabpanel"
                   aria-labelledby="services-tab"
-                  style="background-color: rgb(254, 252, 250);"
+                  style="background-color: rgb(254, 252, 250)"
                 >
                   <div
-                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                    style="background-color: rgb(254, 252, 250);"
+                    class="max-w-sm bg-white mx-auto border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                    style="background-color: rgb(254, 252, 250)"
                   >
                     <a href="#">
                       <img
@@ -1358,11 +1358,11 @@
                   id="statistics"
                   role="tabpanel"
                   aria-labelledby="statistics-tab"
-                  style="background-color: rgb(254, 252, 250);"
+                  style="background-color: rgb(254, 252, 250)"
                 >
                   <div
-                    class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-                    style="background-color: rgb(254, 252, 250);"
+                    class="max-w-sm bg-white mx-auto border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                    style="background-color: rgb(254, 252, 250)"
                   >
                     <a href="#">
                       <img
@@ -1425,7 +1425,10 @@
           <!-- calender -->
           <div class="wrapper">
             <h2 class="text-center font-semibold text-2xl">Calender</h2>
-            <div class="container-calendar rounded-lg border" style="background-color: rgb(254, 252, 250);">
+            <div
+              class="container-calendar rounded-lg border"
+              style="background-color: rgb(254, 252, 250)"
+            >
               <h3 id="monthAndYear"></h3>
               <div class="button-container-calendar">
                 <button id="previous" onclick="previous()">&#8249;</button>
@@ -1435,7 +1438,7 @@
                 <thead id="thead-month"></thead>
                 <tbody id="calendar-body"></tbody>
               </table>
-              <div class="footer-container-calendar rounded-lg ">
+              <div class="footer-container-calendar rounded-lg">
                 <label for="month">Jump To: </label>
                 <select id="month" onchange="jump()">
                   <option value="0">Jan</option>
@@ -1462,23 +1465,122 @@
       <!-- E-Books Start -------------------------------------------------------------------->
       <section>
         <h2 class="text-center font-semibold text-2xl mt-6">E-BooKs</h2>
-        <hr>
-        <div class="image-container ">
-          <img src="https://www.shutterstock.com/image-vector/open-book-vector-clipart-silhouette-260nw-795305758.jpg" alt="Image 1">
-          <img src="https://www.shutterstock.com/image-vector/open-book-vector-clipart-silhouette-260nw-795305758.jpg" alt="Image 1">
-          <img src="https://www.shutterstock.com/image-vector/open-book-vector-clipart-silhouette-260nw-795305758.jpg" alt="Image 1">
-          <img src="https://www.shutterstock.com/image-vector/open-book-vector-clipart-silhouette-260nw-795305758.jpg" alt="Image 1">
-          <img src="https://www.shutterstock.com/image-vector/open-book-vector-clipart-silhouette-260nw-795305758.jpg" alt="Image 1">
+        <hr class="EbookHR" />
+        <div class="image-container">
+          <img
+            src="https://www.shutterstock.com/image-vector/open-book-vector-clipart-silhouette-260nw-795305758.jpg"
+            alt="Image 1"
+          />
+          <img
+            src="https://www.shutterstock.com/image-vector/open-book-vector-clipart-silhouette-260nw-795305758.jpg"
+            alt="Image 1"
+          />
+          <img
+            src="https://www.shutterstock.com/image-vector/open-book-vector-clipart-silhouette-260nw-795305758.jpg"
+            alt="Image 1"
+          />
+          <img
+            src="https://www.shutterstock.com/image-vector/open-book-vector-clipart-silhouette-260nw-795305758.jpg"
+            alt="Image 1"
+          />
+          <img
+            src="https://www.shutterstock.com/image-vector/open-book-vector-clipart-silhouette-260nw-795305758.jpg"
+            alt="Image 1"
+          />
         </div>
-        <hr>
+        <hr class="EbookHR" />
       </section>
       <!-- E-Books End ---------------------------------------------------------------------->
 
+      <section class="grid lg:grid-cols-3 gap-6 my-6">
+        <div class="services col-span-2 flex flex-row justify-between">
+          <div class="Content flex flex-col">
+            <h3 class="title text-lg m-4">Resources</h3>
+            <a class="py-4 px-6 text-sm" target="_blank" href=""
+              >Library User Guide (BLC)</a
+            >
+            <a class="py-4 px-6 text-sm" target="_blank" href="">E-Library</a>
+            <a class="py-4 px-6 text-sm" target="_blank" href=""
+              >Database A-Z</a
+            >
+            <a class="py-4 px-6 text-sm" target="_blank" href=""
+              >Fee Textbooks</a
+            >
+            <a class="py-4 px-6 text-sm" target="_blank" href="">Free Thesis</a>
+            <a class="py-4 px-6 text-sm" target="_blank" href=""
+              >Institutional Repository</a
+            >
+            <a class="py-4 px-6 text-sm" target="_blank" href=""
+              >Voice Library</a
+            >
+          </div>
 
-      <section>
+          <div class="Content flex flex-col">
+            <h3 class="title text-lg m-4">Services</h3>
+            <a class="py-4 px-6 text-sm" target="_blank" href="">Item Renew</a>
+            <a class="py-4 px-6 text-sm" target="_blank" href=""
+              >Literacy Classes</a
+            >
+            <a class="py-4 px-6 text-sm" target="_blank" href=""
+              >Preservation</a
+            >
+            <a class="py-4 px-6 text-sm" target="_blank" href="">Datasets</a>
+            <a class="py-4 px-6 text-sm" target="_blank" href=""
+              >Internship Portal Guideline</a
+            >
+            <a class="py-4 px-6 text-sm" target="_blank" href=""
+              >Reference Management</a
+            >
+            <a class="py-4 px-6 text-sm" target="_blank" href=""
+              >Remote Access</a
+            >
+          </div>
+        </div>
+        <div class="">
+          <div class="min-w-full p-6 my-4 bg-white border border-gray-200 rounded-lg shadow">
+            <a href="#">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                Library Hours
+              </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Here are the biggest enterprise technology acquisitions of 2021 so
+              far, in reverse chronological order.
+            </p>
+          </div>
 
+          <div class="min-w-full p-6 my-4 bg-white border border-gray-200 rounded-lg shadow">
+            <a href="#">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                Library Hours
+              </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Here are the biggest enterprise technology acquisitions of 2021 so
+              far, in reverse chronological order.
+            </p>
+          </div>
+
+          <div class="min-w-full p-6 my-4 bg-white border border-gray-200 rounded-lg shadow">
+            <a href="#">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                Library Hours
+              </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Here are the biggest enterprise technology acquisitions of 2021 so
+              far, in reverse chronological order.
+            </p>
+          </div>
+        
+        </div>
       </section>
-
     </main>
 
     <!-- Footer -->

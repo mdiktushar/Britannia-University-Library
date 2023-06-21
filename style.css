@@ -7,7 +7,7 @@
 /* Search Tab */
 .tabs {
   border: 1px solid #ddd;
-  background-color: rgba(254, 252, 252, 0.8);
+  background-color: rgba(30, 33, 89, .1);
 }
 .tab-button.active {
   border-bottom: black solid 1px;
@@ -53,7 +53,7 @@
 
 .table-calendar td, .table-calendar th {
   padding: 5px;
-  border: 1px solid #e2e2e2;
+  border: 1px solid  rgba(30, 33, 89, .1);
   text-align: center;
   vertical-align: top;
 }
@@ -129,6 +129,11 @@ color: green;
   animation: slideLeft 10s linear infinite;
 }
 
+.EbookHR {
+  
+  border: #1e2159 solid 5px;
+}
+
 @keyframes slideLeft {
   0% {
     transform: translateX(0);
@@ -138,3 +143,25 @@ color: green;
   }
 }
 /* E-Books End*/
+
+
+/* services ....................................................... */
+.services {
+  background-image: url('https://imgmedia.lbb.in/media/2020/03/5e6fa0adcdf431136ea4aeb9_1584373933388.jpg');
+}
+
+.services .Content {
+  background-color: #1e2159;
+  opacity: 0.90;
+}
+.services .Content h3 {
+  color: white;
+}
+
+.services .Content a {
+  color: white;
+  border: solid 1px rgb(162, 200, 231);
+  margin: 10px 20px;
+}
+
+/* services End ....................................................... */
