@@ -126,7 +126,7 @@ color: green;
 .image-container img {
   display: inline-block;
   vertical-align: middle;
-  animation: slideLeft 5s linear infinite;
+  animation: slideLeft 15s linear infinite;
 }
 
 .EbookHR {
