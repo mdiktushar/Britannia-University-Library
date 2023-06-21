@@ -935,7 +935,7 @@
 
     <main>
       <!-- Search Tab Start -->
-      <section>
+      <section class="rounded-lg flex justify-between" style="background-color: rgb(254, 252, 250); min-height: 250px;">
         <div class="tabs rounded-lg mt-4 max-w-2xl mx-auto px-5 mb-6">
           <div class="tab-header flex justify-center m-4">
             <button
@@ -1113,17 +1113,17 @@
       <!-- Search Tab End ------------------------------------------------------------------->
 
       <!-- Notice, Message & Calender --------------------------------------------------------------------------->
-      <section class="mt-20">
+      <section class="mt-20" style="background-color: rgb(254, 252, 250);">
         <div class="grid lg:grid-cols-3 lg:gap-4">
           <!-- Notice -->
-          <div class="flex flex-col">
+          <div class="flex flex-col px-4">
             <h2 class="text-center font-semibold text-2xl">Notice</h2>
             <marquee
               direction="up"
               onmouseover="this.stop()"
               onmouseout="this.start()"
               scrollamount="5"
-              class="max-w-sm max-h-16"
+              class="max-w-sm max-h-16 border rounded-lg p-2 "
             >
               <!-- start content -->
               <div id="content">
@@ -1170,6 +1170,7 @@
           </div>
           <!-- Message -->
           <div>
+            <h2 class="text-center font-semibold text-2xl">Messages</h2>
             <div
               class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
             >
@@ -1226,9 +1227,11 @@
                   id="about"
                   role="tabpanel"
                   aria-labelledby="about-tab"
+                  style="background-color: rgb(254, 252, 250);"
                 >
                   <div
                     class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                    style="background-color: rgb(254, 252, 250);"
                   >
                     <a href="#">
                       <img
@@ -1287,9 +1290,11 @@
                   id="services"
                   role="tabpanel"
                   aria-labelledby="services-tab"
+                  style="background-color: rgb(254, 252, 250);"
                 >
                   <div
                     class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                    style="background-color: rgb(254, 252, 250);"
                   >
                     <a href="#">
                       <img
@@ -1353,9 +1358,11 @@
                   id="statistics"
                   role="tabpanel"
                   aria-labelledby="statistics-tab"
+                  style="background-color: rgb(254, 252, 250);"
                 >
                   <div
                     class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+                    style="background-color: rgb(254, 252, 250);"
                   >
                     <a href="#">
                       <img
@@ -1417,7 +1424,8 @@
           </div>
           <!-- calender -->
           <div class="wrapper">
-            <div class="container-calendar">
+            <h2 class="text-center font-semibold text-2xl">Calender</h2>
+            <div class="container-calendar rounded-lg border" style="background-color: rgb(254, 252, 250);">
               <h3 id="monthAndYear"></h3>
               <div class="button-container-calendar">
                 <button id="previous" onclick="previous()">&#8249;</button>
@@ -1427,7 +1435,7 @@
                 <thead id="thead-month"></thead>
                 <tbody id="calendar-body"></tbody>
               </table>
-              <div class="footer-container-calendar">
+              <div class="footer-container-calendar rounded-lg ">
                 <label for="month">Jump To: </label>
                 <select id="month" onchange="jump()">
                   <option value="0">Jan</option>
@@ -1454,15 +1462,22 @@
       <!-- E-Books Start -------------------------------------------------------------------->
       <section>
         <h2 class="text-center font-semibold text-2xl mt-6">E-BooKs</h2>
-        <div class="image-container">
+        <hr>
+        <div class="image-container ">
           <img src="https://www.shutterstock.com/image-vector/open-book-vector-clipart-silhouette-260nw-795305758.jpg" alt="Image 1">
           <img src="https://www.shutterstock.com/image-vector/open-book-vector-clipart-silhouette-260nw-795305758.jpg" alt="Image 1">
           <img src="https://www.shutterstock.com/image-vector/open-book-vector-clipart-silhouette-260nw-795305758.jpg" alt="Image 1">
           <img src="https://www.shutterstock.com/image-vector/open-book-vector-clipart-silhouette-260nw-795305758.jpg" alt="Image 1">
           <img src="https://www.shutterstock.com/image-vector/open-book-vector-clipart-silhouette-260nw-795305758.jpg" alt="Image 1">
         </div>
+        <hr>
       </section>
       <!-- E-Books End ---------------------------------------------------------------------->
+
+
+      <section>
+
+      </section>
 
     </main>
 
