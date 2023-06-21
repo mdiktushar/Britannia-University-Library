@@ -4,11 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Britannia University Library</title>
+
     <link
       rel="icon"
       type="image/x-icon"
       href="https://britannia.edu.bd/images/favicon.png"
     />
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <!-- flowbite -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"
@@ -52,761 +59,766 @@
         </nav>
         <nav class="bg-gray-50 dark:bg-gray-700">
           <div class="max-w-screen-xl px-4 py-3 mx-auto">
+            <!-- nav option -->
             <div class="flex items-center">
-              <ul
-                class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
-              >
-                <li>
-                  <a
-                    href="#"
-                    class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
-                    aria-current="page"
-                    >Home</a
-                  >
-                </li>
-                <li>
-                  <button
-                    id="libraryServices"
-                    data-dropdown-toggle="libraryServicesToggle"
-                    class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                  >
-                    Library Services
-                    <svg
-                      class="w-5 h-5 ml-1"
-                      aria-hidden="true"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
+              <ul class="sm:flex sm:flex-col">
+                <!-- menu toggle button -->
+                <button id="navButton" class="md:hidden">
+                  <i class="fa-solid fa-bars mr-2"></i>
+                </button>
+                <!-- nav menu -->
+                <div
+                  id="navbarOption"
+                  class="flex flex-col font-medium hidden md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+                      aria-current="page"
+                      >Home</a
                     >
-                      <path
-                        fill-rule="evenodd"
-                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </button>
-                  <!-- Library Services Toggle menu -->
-                  <div
-                    id="libraryServicesToggle"
-                    class="hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-                  >
-                    <ul
-                      class="py-2 text-sm text-gray-700 dark:text-gray-400"
-                      aria-labelledby="dropdownLargeButton"
+                  </li>
+                  <li>
+                    <button
+                      id="libraryServices"
+                      data-dropdown-toggle="libraryServicesToggle"
+                      class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                     >
-                      <li>
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >Borrowing Privileges</a
-                        >
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >Article Request</a
-                        >
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >News Clippings</a
-                        >
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >Common Services for Every Users</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <button
-                    id="eLibrary"
-                    data-dropdown-toggle="eLibraryToggle"
-                    class="navToggle flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                  >
-                    E-Library
-                    <svg
-                      class="w-5 h-5 ml-1"
-                      aria-hidden="true"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
+                      Library Services
+                      <svg
+                        class="w-5 h-5 ml-1"
+                        aria-hidden="true"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                    <!-- Library Services Toggle menu -->
+                    <div
+                      id="libraryServicesToggle"
+                      class="hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
                     >
-                      <path
-                        fill-rule="evenodd"
-                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </button>
-                  <!-- E Library Toggle -->
-                  <div
-                    id="eLibraryToggle"
-                    class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-                  >
-                    <ul
-                      class="py-2 text-sm text-gray-700 dark:text-gray-400"
-                      aria-labelledby="dropdownLargeButton"
+                      <ul
+                        class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                        aria-labelledby="dropdownLargeButton"
+                      >
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >Borrowing Privileges</a
+                          >
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >Article Request</a
+                          >
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >News Clippings</a
+                          >
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >Common Services for Every Users</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <button
+                      id="eLibrary"
+                      data-dropdown-toggle="eLibraryToggle"
+                      class="navToggle flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                     >
-                      <li aria-labelledby="dropdownNavbarLink">
-                        <!-- e book -->
-                        <button
-                          id="eBookButton"
-                          data-dropdown-toggle="eBookToggle"
-                          data-dropdown-placement="right-start"
-                          type="button"
-                          class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >
-                          E-Book<svg
-                            aria-hidden="true"
-                            class="w-5 h-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </button>
-                        <!-- e book toggle -->
-                        <div
-                          id="eBookToggle"
-                          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                        >
-                          <ul
-                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                            aria-labelledby="doubleDropdownButton"
-                          >
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >Science Direct</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >Wiley Online Library</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >World Scientific</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                      <!-- e journals -->
-                      <li aria-labelledby="dropdownNavbarLink">
-                        <button
-                          id="doubleEJournalsButton"
-                          data-dropdown-toggle="ejournalsToggle"
-                          data-dropdown-placement="right-start"
-                          type="button"
-                          class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >
-                          E Journals<svg
-                            aria-hidden="true"
-                            class="w-5 h-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </button>
-                        <div
-                          id="ejournalsToggle"
-                          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                        >
-                          <ul
-                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                            aria-labelledby="doubleDropdownButton"
-                          >
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >Wiley E-Journals</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >OAJSE</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >DOAJ</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >Elsevier Journals</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >Journal Articles</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >DATABASE A-Z</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >Online Newspapers</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >E-Books</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >OPAC</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >Voice Library</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >UGC Digital library</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <!-- Journals -->
-                <li>
-                  <button
-                    id="journals"
-                    data-dropdown-toggle="journalsToggle"
-                    class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                  >
-                    Journals
-                    <svg
-                      class="w-5 h-5 ml-1"
-                      aria-hidden="true"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
+                      E-Library
+                      <svg
+                        class="w-5 h-5 ml-1"
+                        aria-hidden="true"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                    <!-- E Library Toggle -->
+                    <div
+                      id="eLibraryToggle"
+                      class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
                     >
-                      <path
-                        fill-rule="evenodd"
-                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </button>
-                  <!-- Journals Toggle -->
-                  <div
-                    id="journalsToggle"
-                    class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-                  >
-                    <ul
-                      class="py-2 text-sm text-gray-700 dark:text-gray-400"
-                      aria-labelledby="dropdownLargeButton"
+                      <ul
+                        class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                        aria-labelledby="dropdownLargeButton"
+                      >
+                        <li aria-labelledby="dropdownNavbarLink">
+                          <!-- e book -->
+                          <button
+                            id="eBookButton"
+                            data-dropdown-toggle="eBookToggle"
+                            data-dropdown-placement="right-start"
+                            type="button"
+                            class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            E-Book<svg
+                              aria-hidden="true"
+                              class="w-5 h-5"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"
+                              ></path>
+                            </svg>
+                          </button>
+                          <!-- e book toggle -->
+                          <div
+                            id="eBookToggle"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                          >
+                            <ul
+                              class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                              aria-labelledby="doubleDropdownButton"
+                            >
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >Science Direct</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >Wiley Online Library</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >World Scientific</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <!-- e journals -->
+                        <li aria-labelledby="dropdownNavbarLink">
+                          <button
+                            id="doubleEJournalsButton"
+                            data-dropdown-toggle="ejournalsToggle"
+                            data-dropdown-placement="right-start"
+                            type="button"
+                            class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            E Journals<svg
+                              aria-hidden="true"
+                              class="w-5 h-5"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"
+                              ></path>
+                            </svg>
+                          </button>
+                          <div
+                            id="ejournalsToggle"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                          >
+                            <ul
+                              class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                              aria-labelledby="doubleDropdownButton"
+                            >
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >Wiley E-Journals</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >OAJSE</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >DOAJ</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >Elsevier Journals</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >Journal Articles</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >DATABASE A-Z</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >Online Newspapers</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >E-Books</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >OPAC</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >Voice Library</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >UGC Digital library</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <!-- Journals -->
+                  <li>
+                    <button
+                      id="journals"
+                      data-dropdown-toggle="journalsToggle"
+                      class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                     >
-                      <li aria-labelledby="dropdownNavbarLink">
-                        <!-- Business School -->
-                        <button
-                          id="schoolOfBusinessButton"
-                          data-dropdown-toggle="schoolOfBusinessToggle"
-                          data-dropdown-placement="right-start"
-                          type="button"
-                          class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >
-                          School of Business<svg
-                            aria-hidden="true"
-                            class="w-5 h-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
+                      Journals
+                      <svg
+                        class="w-5 h-5 ml-1"
+                        aria-hidden="true"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                    <!-- Journals Toggle -->
+                    <div
+                      id="journalsToggle"
+                      class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                    >
+                      <ul
+                        class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                        aria-labelledby="dropdownLargeButton"
+                      >
+                        <li aria-labelledby="dropdownNavbarLink">
+                          <!-- Business School -->
+                          <button
+                            id="schoolOfBusinessButton"
+                            data-dropdown-toggle="schoolOfBusinessToggle"
+                            data-dropdown-placement="right-start"
+                            type="button"
+                            class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                           >
-                            <path
-                              fill-rule="evenodd"
-                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </button>
-                        <!-- schoolOfBusinessToggle -->
-                        <div
-                          id="schoolOfBusinessToggle"
-                          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                        >
-                          <ul
-                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                            aria-labelledby="doubleDropdownButton"
+                            School of Business<svg
+                              aria-hidden="true"
+                              class="w-5 h-5"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"
+                              ></path>
+                            </svg>
+                          </button>
+                          <!-- schoolOfBusinessToggle -->
+                          <div
+                            id="schoolOfBusinessToggle"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
                           >
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >Journal of Product & Brand Management</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >Journal of Internet Banking and Commerce</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >International Journal of Business & Management
-                                Future</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >Journal of Shipping & Trade</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
+                            <ul
+                              class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                              aria-labelledby="doubleDropdownButton"
+                            >
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >Journal of Product & Brand Management</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >Journal of Internet Banking and Commerce</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >International Journal of Business &
+                                  Management Future</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >Journal of Shipping & Trade</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
 
-                      <li aria-labelledby="dropdownNavbarLink">
-                        <!-- CSE -->
-                        <button
-                          id="cseButton"
-                          data-dropdown-toggle="cseToggle"
-                          data-dropdown-placement="right-start"
-                          type="button"
-                          class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >
-                          Department of CSE<svg
-                            aria-hidden="true"
-                            class="w-5 h-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
+                        <li aria-labelledby="dropdownNavbarLink">
+                          <!-- CSE -->
+                          <button
+                            id="cseButton"
+                            data-dropdown-toggle="cseToggle"
+                            data-dropdown-placement="right-start"
+                            type="button"
+                            class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                           >
-                            <path
-                              fill-rule="evenodd"
-                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </button>
-                        <!-- cseToggle -->
-                        <div
-                          id="cseToggle"
-                          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                        >
-                          <ul
-                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                            aria-labelledby="doubleDropdownButton"
+                            Department of CSE<svg
+                              aria-hidden="true"
+                              class="w-5 h-5"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"
+                              ></path>
+                            </svg>
+                          </button>
+                          <!-- cseToggle -->
+                          <div
+                            id="cseToggle"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
                           >
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >INFOCOMP Journal of Computer Science</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >Journal of Artificial Intelligence Research
-                                (JAIR)</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >Journal of Computational Geometry</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >The Journal of Computer Graphics Techniques</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >Theory of Computing</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
+                            <ul
+                              class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                              aria-labelledby="doubleDropdownButton"
+                            >
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >INFOCOMP Journal of Computer Science</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >Journal of Artificial Intelligence Research
+                                  (JAIR)</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >Journal of Computational Geometry</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >The Journal of Computer Graphics
+                                  Techniques</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >Theory of Computing</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
 
-                      <li aria-labelledby="dropdownNavbarLink">
-                        <!-- LLB  -->
-                        <button
-                          id="LLBDepartmentButton"
-                          data-dropdown-toggle="LLBDepartmentToggle"
-                          data-dropdown-placement="right-start"
-                          type="button"
-                          class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >
-                          Department of LLB<svg
-                            aria-hidden="true"
-                            class="w-5 h-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
+                        <li aria-labelledby="dropdownNavbarLink">
+                          <!-- LLB  -->
+                          <button
+                            id="LLBDepartmentButton"
+                            data-dropdown-toggle="LLBDepartmentToggle"
+                            data-dropdown-placement="right-start"
+                            type="button"
+                            class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                           >
-                            <path
-                              fill-rule="evenodd"
-                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </button>
-                        <!-- LLBDepartmentToggle -->
-                        <div
-                          id="LLBDepartmentToggle"
-                          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                        >
-                          <ul
-                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                            aria-labelledby="doubleDropdownButton"
+                            Department of LLB<svg
+                              aria-hidden="true"
+                              class="w-5 h-5"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"
+                              ></path>
+                            </svg>
+                          </button>
+                          <!-- LLBDepartmentToggle -->
+                          <div
+                            id="LLBDepartmentToggle"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
                           >
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >Jahangirnagar University Journal of Law</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >Journal of International Humanitarial Action</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >International Journal of Law</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >International Journal of Law, Policy & Social
-                                Review</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
+                            <ul
+                              class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                              aria-labelledby="doubleDropdownButton"
+                            >
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >Jahangirnagar University Journal of Law</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >Journal of International Humanitarial
+                                  Action</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >International Journal of Law</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >International Journal of Law, Policy & Social
+                                  Review</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
 
-                      <li aria-labelledby="dropdownNavbarLink">
-                        <!-- English -->
-                        <button
-                          id="EnglishDepartmentButton"
-                          data-dropdown-toggle="EnglishDepartmentToggle"
-                          data-dropdown-placement="right-start"
-                          type="button"
-                          class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >
-                          Department of English<svg
-                            aria-hidden="true"
-                            class="w-5 h-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
+                        <li aria-labelledby="dropdownNavbarLink">
+                          <!-- English -->
+                          <button
+                            id="EnglishDepartmentButton"
+                            data-dropdown-toggle="EnglishDepartmentToggle"
+                            data-dropdown-placement="right-start"
+                            type="button"
+                            class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                           >
-                            <path
-                              fill-rule="evenodd"
-                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </button>
-                        <!-- EnglishDepartmentToggle -->
-                        <div
-                          id="EnglishDepartmentToggle"
-                          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                        >
-                          <ul
-                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                            aria-labelledby="doubleDropdownButton"
+                            Department of English<svg
+                              aria-hidden="true"
+                              class="w-5 h-5"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"
+                              ></path>
+                            </svg>
+                          </button>
+                          <!-- EnglishDepartmentToggle -->
+                          <div
+                            id="EnglishDepartmentToggle"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
                           >
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >International Journal of English Research</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >International Journal of Research in English</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
+                            <ul
+                              class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                              aria-labelledby="doubleDropdownButton"
+                            >
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >International Journal of English Research</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >International Journal of Research in
+                                  English</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
 
-                      <li aria-labelledby="dropdownNavbarLink">
-                        <!-- Local Journal -->
-                        <button
-                          id="LocalJournalButton"
-                          data-dropdown-toggle="LocalJournalToggle"
-                          data-dropdown-placement="right-start"
-                          type="button"
-                          class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >
-                          Local Journal<svg
-                            aria-hidden="true"
-                            class="w-5 h-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
+                        <li aria-labelledby="dropdownNavbarLink">
+                          <!-- Local Journal -->
+                          <button
+                            id="LocalJournalButton"
+                            data-dropdown-toggle="LocalJournalToggle"
+                            data-dropdown-placement="right-start"
+                            type="button"
+                            class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                           >
-                            <path
-                              fill-rule="evenodd"
-                              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </button>
-                        <!-- LocalJournalToggle -->
-                        <div
-                          id="LocalJournalToggle"
-                          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                        >
-                          <ul
-                            class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                            aria-labelledby="doubleDropdownButton"
+                            Local Journal<svg
+                              aria-hidden="true"
+                              class="w-5 h-5"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"
+                              ></path>
+                            </svg>
+                          </button>
+                          <!-- LocalJournalToggle -->
+                          <div
+                            id="LocalJournalToggle"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
                           >
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >Dhaka University Journals</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >Jahangir University Journals</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >RU Journals</a
-                              >
-                            </li>
-                            <li>
-                              <a
-                                href="#"
-                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
-                                >Bangladesh Journals Online</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >
-                          Journal's Articles, BU Faculty</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                    >Library Facilities</a
-                  >
-                </li>
-                <!-- About -->
-                <li>
-                  <button
-                    id="AboutLibrary"
-                    data-dropdown-toggle="AboutLibraryToggle"
-                    class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                  >
-                    About
-                    <svg
-                      class="w-5 h-5 ml-1"
-                      aria-hidden="true"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
+                            <ul
+                              class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                              aria-labelledby="doubleDropdownButton"
+                            >
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >Dhaka University Journals</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >Jahangir University Journals</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >RU Journals</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  href="#"
+                                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                  >Bangladesh Journals Online</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            Journal's Articles, BU Faculty</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                      >Library Facilities</a
                     >
-                      <path
-                        fill-rule="evenodd"
-                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </button>
-                  <!-- About Library Toggle menu -->
-                  <div
-                    id="AboutLibraryToggle"
-                    class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-                  >
-                    <ul
-                      class="py-2 text-sm text-gray-700 dark:text-gray-400"
-                      aria-labelledby="dropdownLargeButton"
+                  </li>
+                  <!-- About -->
+                  <li>
+                    <button
+                      id="AboutLibrary"
+                      data-dropdown-toggle="AboutLibraryToggle"
+                      class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                     >
-                      <li>
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >BU Library</a
-                        >
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >Vision & Mission</a
-                        >
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >Objectives</a
-                        >
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >Basic Information</a
-                        >
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >Library Committee</a
-                        >
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >Library Sections</a
-                        >
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >Image Albums</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <!-- Registration -->
-                <li>
-                  <button
-                    id="Registration"
-                    data-dropdown-toggle="RegistrationToggle"
-                    class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                  >
-                    Registration
-                    <svg
-                      class="w-5 h-5 ml-1"
-                      aria-hidden="true"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
+                      About
+                      <svg
+                        class="w-5 h-5 ml-1"
+                        aria-hidden="true"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                    <!-- About Library Toggle menu -->
+                    <div
+                      id="AboutLibraryToggle"
+                      class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
                     >
-                      <path
-                        fill-rule="evenodd"
-                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </button>
-                  <!-- Registration Toggle menu -->
-                  <div
-                    id="RegistrationToggle"
-                    class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
-                  >
-                    <ul
-                      class="py-2 text-sm text-gray-700 dark:text-gray-400"
-                      aria-labelledby="dropdownLargeButton"
+                      <ul
+                        class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                        aria-labelledby="dropdownLargeButton"
+                      >
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >BU Library</a
+                          >
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >Vision & Mission</a
+                          >
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >Objectives</a
+                          >
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >Basic Information</a
+                          >
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >Library Committee</a
+                          >
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >Library Sections</a
+                          >
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >Image Albums</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <!-- Registration -->
+                  <li>
+                    <button
+                      id="Registration"
+                      data-dropdown-toggle="RegistrationToggle"
+                      class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
                     >
-                      <li>
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >Library Membership - Online Application</a
-                        >
-                        <a
-                          href="#"
-                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                          >Renew Library Membership</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                    >Login</a
-                  >
-                </li>
+                      Registration
+                      <svg
+                        class="w-5 h-5 ml-1"
+                        aria-hidden="true"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                    <!-- Registration Toggle menu -->
+                    <div
+                      id="RegistrationToggle"
+                      class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                    >
+                      <ul
+                        class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                        aria-labelledby="dropdownLargeButton"
+                      >
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >Library Membership - Online Application</a
+                          >
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >Renew Library Membership</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </div>
               </ul>
             </div>
           </div>
@@ -946,7 +958,7 @@
         </div>
         <div class="tab-content">
           <div id="tab1" class="tab-pane active">
-            <form></form>
+            <form action="">
               <label
                 for="default-search"
                 class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -1287,10 +1299,44 @@
     </footer>
     <!-- Footer End -->
 
-
     <!-- Flowbite script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
   </body>
+
+  <!-- js for navbar -->
+  <script>
+    // Get references to the button and the div
+    var button = document.getElementById("navButton");
+    var div = document.getElementById("navbarOption");
+
+    // Function to handle the visibility based on screen size
+    function handleVisibility() {
+      // Check if the screen size is medium or larger
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        // Remove the "hidden" class
+        div.classList.remove("hidden");
+      } else {
+        // Add the "hidden" class
+        div.classList.add("hidden");
+      }
+    }
+
+    // Initial call to handle visibility on page load
+    handleVisibility();
+
+    // Add resize event listener to handle visibility changes when the screen size changes
+    window.addEventListener("resize", handleVisibility);
+
+    // Add click event listener to the button
+    button.addEventListener("click", function () {
+      // Toggle the "hidden" class on the div only if the screen size is smaller than medium
+      if (!window.matchMedia("(min-width: 768px)").matches) {
+        div.classList.toggle("hidden");
+      }
+    });
+  </script>
+
+  <!-- Js For Slide Show in banner -->
   <script>
     // Function to click the button
     function clickButton() {
@@ -1301,6 +1347,8 @@
     // Auto-click the button every 5 seconds
     setInterval(clickButton, 10000);
   </script>
+
+  <!-- Js for tab-button for search section-->
   <script>
     // Get all tab buttons
     const tabButtons = document.querySelectorAll(".tab-button");
