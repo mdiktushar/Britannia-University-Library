@@ -39,9 +39,9 @@
   cursor: pointer;
   display: inline-block;
   zoom: 1;
-  background: #00a2b7;
+  background: #591e1e;
   color: #fff;
-  border: 1px solid #0aa2b5;
+  border: 1px solid #401515;;
   border-radius: 4px;
   padding: 5px 10px;
 }
@@ -131,7 +131,7 @@ color: green;
 
 .EbookHR {
   
-  border: #1e2159 solid 5px;
+  border: #591e1e solid 5px;
 }
 
 @keyframes slideLeft {
@@ -151,7 +151,7 @@ color: green;
 }
 
 .services .Content {
-  background-color: #1e2159;
+  background-color: #591e1e;
   border-radius: 2%;
   opacity: 0.90;
 }
@@ -161,7 +161,7 @@ color: green;
 
 .services .Content a {
   color: white;
-  border: solid 1px rgb(162, 200, 231);
+  border: solid 3px #370000;
   margin: 10px 20px;
 }
 
