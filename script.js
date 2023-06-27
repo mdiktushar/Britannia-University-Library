@@ -30,6 +30,31 @@ button.addEventListener("click", function () {
 });
 // .....................................................
 
+
+// Tab-Button for search section ..........................
+// Get all tab buttons
+const tabButtons = document.querySelectorAll(".tab-button");
+
+// Get all tab panes
+const tabPanes = document.querySelectorAll(".tab-pane");
+
+// Add event listener to each tab button
+tabButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Remove 'active' class from all tab buttons and panes
+    tabButtons.forEach((btn) => btn.classList.remove("active"));
+    tabPanes.forEach((pane) => pane.classList.remove("active"));
+
+    // Add 'active' class to the clicked tab button and corresponding pane
+    const tabId = button.getAttribute("data-tab");
+    const tabPane = document.getElementById(tabId);
+    button.classList.add("active");
+    tabPane.classList.add("active");
+  });
+});
+// ............................................................
+
+
 // calender ..................................................
 function generate_year_range(start, end) {
   var years = "";
