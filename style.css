@@ -1,7 +1,7 @@
 /* Search Tab */
 .tabs {
   border: 1px solid #ddd;
-  background-color: rgba(30, 33, 89, .1);
+  background-color: rgba(30, 33, 89, 0.1);
 }
 .tab-button.active {
   border-bottom: black solid 1px;
@@ -15,16 +15,28 @@
 }
 /* Search Tab End */
 
+/* Notice, Message &( Calender & info) Section */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 10px;
+}
+/* Media query for medium screens and smaller */
+@media (max-width: 820px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column for medium screens and smaller */
+  }
+}
+
 /* Calender Start*/
 .wrapper {
-  margin: 15px auto;
-  max-width: 1100px;
+  margin: 10px auto;
+  max-width: 278px;
 }
 
 .container-calendar {
   background: #ffffff;
-  padding: 15px;
-  max-width: 475px;
+  padding: 10px;
   margin: 0 auto;
   overflow: auto;
 }
@@ -35,7 +47,7 @@
   zoom: 1;
   background: #591e1e;
   color: #fff;
-  border: 1px solid #401515;;
+  border: 1px solid #401515;
   border-radius: 4px;
   padding: 5px 10px;
 }
@@ -45,31 +57,32 @@
   width: 100%;
 }
 
-.table-calendar td, .table-calendar th {
-  padding: 5px;
-  border: 1px solid  rgba(30, 33, 89, .1);
+.table-calendar td,
+.table-calendar th {
+  padding: 3px;
+  border: 1px solid rgba(30, 33, 89, 0.1);
   text-align: center;
   vertical-align: top;
 }
 
 .date-picker.selected {
   font-weight: bold;
-  outline: 1px dashed #00BCD4;
+  outline: 1px dashed #00bcd4;
 }
 
 .date-picker.selected span {
   border-bottom: 2px solid currentColor;
 }
 
-/* sunday */
-.date-picker:nth-child(1) {
-color: red;
+/* friday, saturday */
+.date-picker:nth-child(6), .date-picker:nth-child(7) {
+  color: red;
 }
 
-/* friday */
-.date-picker:nth-child(6) {
-color: green;
-}
+/* saturday */
+/* .date-picker:nth-child(7) {
+  color: green;
+} */
 
 #monthAndYear {
   text-align: center;
@@ -105,10 +118,9 @@ color: green;
   color: #585858;
   border: 1px solid #bfc5c5;
   border-radius: 3px;
-  padding: 5px 1em;
+  padding: 3px 1em;
 }
 /* Calender End */
-
 
 /* E-Books */
 .image-container {
@@ -124,7 +136,6 @@ color: green;
 }
 
 .EbookHR {
-  
   border: #591e1e solid 5px;
 }
 
@@ -138,16 +149,15 @@ color: green;
 }
 /* E-Books End*/
 
-
 /* services ....................................................... */
 .services {
-  background-image: url('https://imgmedia.lbb.in/media/2020/03/5e6fa0adcdf431136ea4aeb9_1584373933388.jpg');
+  background-image: url("https://imgmedia.lbb.in/media/2020/03/5e6fa0adcdf431136ea4aeb9_1584373933388.jpg");
 }
 
 .services .Content {
   background-color: #591e1e;
   border-radius: 2%;
-  opacity: 0.90;
+  opacity: 0.9;
 }
 .services .Content h3 {
   color: white;
