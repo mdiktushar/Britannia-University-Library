@@ -4,6 +4,7 @@
   background-color: rgba(30, 33, 89, 0.1);
 }
 .tab-button.active {
+  background: rgba(56, 133, 210, 0.2);
   border-bottom: black solid 1px;
 }
 .tab-pane {
