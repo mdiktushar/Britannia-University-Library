@@ -34,6 +34,7 @@
 .A-Z-database-parent {
   width: 50%;
 }
+
 .A-Z-database a:hover {
  font-size: larger;
 }
@@ -47,6 +48,9 @@
   /* CSS rules for small screens */
   .A-Z-database-parent {
     width: 100%;
+  }
+  .A-Z-database-parent {
+    min-height: 400px;
   }
 }
 
