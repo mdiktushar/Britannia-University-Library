@@ -28,8 +28,32 @@
     grid-template-columns: 1fr; /* Single column for medium screens and smaller */
   }
 }
+/* Notice, Message &( Calender & info) Section End .........................................*/
 
-/* Calender Start*/
+/* A-Z Database Start ......................................... */
+.A-Z-database-parent {
+  width: 50%;
+}
+.A-Z-database a:hover {
+ font-size: larger;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* CSS rules for medium screens */
+  .A-Z-database-parent {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* CSS rules for small screens */
+  .A-Z-database-parent {
+    width: 100%;
+  }
+}
+
+/* A-Z Database End ......................................... */
+
+
+/* Calender Start .........................................*/
 .wrapper {
   margin: 10px auto;
   max-width: 278px;
@@ -80,11 +104,6 @@
   color: red;
 }
 
-/* saturday */
-/* .date-picker:nth-child(7) {
-  color: green;
-} */
-
 #monthAndYear {
   text-align: center;
   margin-top: 0;
@@ -121,9 +140,9 @@
   border-radius: 3px;
   padding: 3px 1em;
 }
-/* Calender End */
+/* Calender End ......................................... */
 
-/* E-Books */
+/* E-Books ......................................... */
 .image-container {
   width: 100%;
   overflow: hidden;

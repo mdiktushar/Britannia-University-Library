@@ -231,3 +231,25 @@ function daysInMonth(iMonth, iYear) {
   return 32 - new Date(iYear, iMonth, 32).getDate();
 }
 // calender End ..............................................
+
+
+
+// A to Z Database Start ..............................................
+var nextButton = document.getElementById("data-next-button");
+    var carousel = document.getElementById("default-carousel2");
+    var autoClickInterval;
+
+    function autoClick() {
+      nextButton.click();
+    }
+
+    carousel.addEventListener("mouseenter", function () {
+      clearInterval(autoClickInterval);
+    });
+
+    carousel.addEventListener("mouseleave", function () {
+      autoClickInterval = setInterval(autoClick, 3000);
+    });
+
+    autoClickInterval = setInterval(autoClick, 3000);
+// A to Z Database end ..............................................
