@@ -32,45 +32,81 @@
           <div
             class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4"
           >
-            <a href="https://flowbite.com" class="flex items-center">
-              <img
-                src="https://britannia.edu.bd/admin/img/logo/logo.png"
-                class="h-8 mr-3"
-                alt="Flowbite Logo"
-              />
-              <span
-                class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-                >Library</span
-              >
-            </a>
             <div class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
+                />
+              </svg>
               <a
                 href="mailto:library@britannia.edu.bd"
-                class="mr-6 text-sm text-gray-500 dark:text-white hover:underline"
+                class="mr-6 text-sm text-gray-500 dark:text-white hover:underline ml-2"
                 >library@britannia.edu.bd</a
               >
-              <a
-                href="#"
-                class="text-sm text-blue-600 dark:text-blue-500 hover:underline"
-                >Login</a
-              >
             </div>
+            <a
+              href="#"
+              class="text-sm text-blue-600 dark:text-blue-500 hover:underline"
+              >Login</a
+            >
           </div>
         </nav>
         <nav class="bg-gray-50 dark:bg-gray-700">
           <div class="max-w-screen-xl px-4 py-3 mx-auto">
             <!-- nav option -->
             <div class="flex items-center">
-              <ul class="sm:flex sm:flex-col">
+              <ul class="lg:flex lg:flex-col">
                 <!-- menu toggle button -->
-                <button id="navButton" class="md:hidden">
-                  <i class="fa-solid fa-bars"></i>
-                </button>
+                <div class="flex flex-row">
+                  <button id="navButton" class="lg:hidden">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="1em"
+                      viewBox="0 0 448 512"
+                    >
+                      <path
+                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                      />
+                    </svg>
+                  </button>
+                  <a href="/" class="flex items-center ml-4">
+                    <img
+                      src="https://britannia.edu.bd/admin/img/logo/logo.png"
+                      class="h-8 mr-3"
+                      alt="Flowbite Logo"
+                    />
+                    <span
+                      class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+                      >Library</span
+                    >
+                  </a>
+                </div>
                 <!-- nav menu -->
                 <div
                   id="navbarOption"
-                  class="flex flex-col font-medium hidden md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+                  class="flex flex-col font-medium hidden md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
                 >
+                  <!-- logo -->
+                  <li class="logo-nav-option">
+                    <a
+                      href="https://flowbite.com"
+                      class="flex items-center"
+                    >
+                      <img
+                        src="https://britannia.edu.bd/admin/img/logo/logo.png"
+                        class="h-8 mr-3"
+                        alt="Flowbite Logo"
+                      />
+                      <span
+                        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+                        >Library</span
+                      >
+                    </a>
+                  </li>
                   <!-- Home -->
                   <li>
                     <a
@@ -1217,10 +1253,11 @@
           data-carousel=""
           style="background-color: rgba(46, 45, 44, 0.8)"
         >
+          <h1 class="text-center mb-2 text-white">A - Z Database</h1>
           <!-- Carousel wrapper   -->
           <div
             class="relative overflow-hidden rounded-lg text-white"
-            style="min-height: 450px"
+            style="min-height: 550px"
           >
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -2012,7 +2049,7 @@
           class="services col-span-2 flex flex-row justify-between rounded-lg"
         >
           <div class="Content flex flex-col">
-            <h3 class="title text-lg m-4">Resources</h3>
+            <h3 class="title text-lg m-4" style="margin-left: 25px;" >Resources</h3>
             <a class="py-4 px-6 text-sm" target="_blank" href=""
               >Library User Guide (BLC)</a
             >
@@ -2033,7 +2070,7 @@
           </div>
 
           <div class="Content flex flex-col">
-            <h3 class="title text-lg m-4">Services</h3>
+            <h3 class="title text-lg m-4" style="margin-left: 25px;" >Services</h3>
             <a class="py-4 px-6 text-sm" target="_blank" href="">Item Renew</a>
             <a class="py-4 px-6 text-sm" target="_blank" href=""
               >Literacy Classes</a

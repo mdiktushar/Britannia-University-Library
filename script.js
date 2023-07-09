@@ -6,7 +6,7 @@ var div = document.getElementById("navbarOption");
 // Function to handle the visibility based on screen size
 function handleVisibility() {
   // Check if the screen size is medium or larger
-  if (window.matchMedia("(min-width: 768px)").matches) {
+  if (window.matchMedia("(min-width: 1024px)").matches) {
     // Remove the "hidden" class
     div.classList.remove("hidden");
   } else {
@@ -24,12 +24,13 @@ window.addEventListener("resize", handleVisibility);
 // Add click event listener to the button
 button.addEventListener("click", function () {
   // Toggle the "hidden" class on the div only if the screen size is smaller than medium
-  if (!window.matchMedia("(min-width: 768px)").matches) {
+  if (!window.matchMedia("(min-width: 1024px)").matches) {
+    const logoNavOption = document.querySelector(".logo-nav-option");
+    logoNavOption.classList.add("hidden");
     div.classList.toggle("hidden");
   }
 });
 // .....................................................
-
 
 // Tab-Button for search section ..........................
 // Get all tab buttons
@@ -53,7 +54,6 @@ tabButtons.forEach((button) => {
   });
 });
 // ............................................................
-
 
 // calender ..................................................
 function generate_year_range(start, end) {
@@ -232,24 +232,22 @@ function daysInMonth(iMonth, iYear) {
 }
 // calender End ..............................................
 
-
-
 // A to Z Database Start ..............................................
 var nextButton = document.getElementById("data-next-button");
-    var carousel = document.getElementById("default-carousel2");
-    var autoClickInterval;
+var carousel = document.getElementById("default-carousel2");
+var autoClickInterval;
 
-    function autoClick() {
-      nextButton.click();
-    }
+function autoClick() {
+  nextButton.click();
+}
 
-    carousel.addEventListener("mouseenter", function () {
-      clearInterval(autoClickInterval);
-    });
+carousel.addEventListener("mouseenter", function () {
+  clearInterval(autoClickInterval);
+});
 
-    carousel.addEventListener("mouseleave", function () {
-      autoClickInterval = setInterval(autoClick, 3000);
-    });
+carousel.addEventListener("mouseleave", function () {
+  autoClickInterval = setInterval(autoClick, 3000);
+});
 
-    autoClickInterval = setInterval(autoClick, 3000);
+autoClickInterval = setInterval(autoClick, 3000);
 // A to Z Database end ..............................................
