@@ -159,6 +159,10 @@
   animation: slideLeft 15s linear infinite;
 }
 
+.image-container:hover img {
+  animation-play-state: paused;
+}
+
 .EbookHR {
   border: #591e1e solid 5px;
 }
@@ -171,6 +175,7 @@
     transform: translateX(-100%);
   }
 }
+
 /* E-Books End*/
 
 /* services ....................................................... */
