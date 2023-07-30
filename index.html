@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body style="margin: auto; max-width: 1280px">
-    <header>
+    <header id="carousel-header">
       <!-- Nav Bar Start ------------------------------------------------------------------->
       <div>
         <nav class="bg-white border-gray-200 dark:bg-gray-900">
@@ -92,10 +92,7 @@
                 >
                   <!-- logo -->
                   <li class="logo-nav-option">
-                    <a
-                      href="https://flowbite.com"
-                      class="flex items-center"
-                    >
+                    <a href="https://flowbite.com" class="flex items-center">
                       <img
                         src="https://britannia.edu.bd/admin/img/logo/logo.png"
                         class="h-8 mr-3"
@@ -918,7 +915,7 @@
       <div
         id="default-carousel"
         class="relative w-full banner"
-        data-carousel="slide"
+        data-carousel="static"
       >
         <!-- Carousel wrapper -->
         <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
@@ -932,9 +929,11 @@
             <!-- Text overlay -->
             <div
               class="absolute rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-xl"
-              style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;"
+              style="background-color: rgba(0, 0, 0, 0.7); padding: 20px"
             >
-             <p class="text-xs md:text-xl" style="color: rgb(225, 222, 222);">Image One</p>
+              <p class="text-xs md:text-xl" style="color: rgb(225, 222, 222)">
+                Image One
+              </p>
             </div>
           </div>
           <!-- Item 2 -->
@@ -947,9 +946,11 @@
             <!-- Text overlay -->
             <div
               class="absolute rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-xl"
-              style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;"
+              style="background-color: rgba(0, 0, 0, 0.7); padding: 20px"
             >
-             <p class="text-xs md:text-xl" style="color: rgb(225, 222, 222);">Image Two</p>
+              <p class="text-xs md:text-xl" style="color: rgb(225, 222, 222)">
+                Image Two
+              </p>
             </div>
           </div>
           <!-- Item 3 -->
@@ -962,9 +963,11 @@
             <!-- Text overlay -->
             <div
               class="absolute rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-xl"
-              style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;"
+              style="background-color: rgba(0, 0, 0, 0.7); padding: 20px"
             >
-             <p class="text-xs md:text-xl" style="color: rgb(225, 222, 222);">Image Three</p>
+              <p class="text-xs md:text-xl" style="color: rgb(225, 222, 222)">
+                Image Three
+              </p>
             </div>
           </div>
           <!-- Item 4 -->
@@ -977,9 +980,11 @@
             <!-- Text overlay -->
             <div
               class="absolute rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-xl"
-              style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;"
+              style="background-color: rgba(0, 0, 0, 0.7); padding: 20px"
             >
-             <p class="text-xs md:text-xl" style="color: rgb(225, 222, 222);">Image Four</p>
+              <p class="text-xs md:text-xl" style="color: rgb(225, 222, 222)">
+                Image Four
+              </p>
             </div>
           </div>
           <!-- Item 5 -->
@@ -992,9 +997,11 @@
             <!-- Text overlay -->
             <div
               class="absolute rounded top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-xl"
-              style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;"
+              style="background-color: rgba(0, 0, 0, 0.7); padding: 20px"
             >
-             <p class="text-xs md:text-xl" style="color: rgb(225, 222, 222);">Image Five</p>
+              <p class="text-xs md:text-xl" style="color: rgb(225, 222, 222)">
+                Image Five
+              </p>
             </div>
           </div>
         </div>
@@ -1067,6 +1074,7 @@
           </span>
         </button>
         <button
+          id="carousel-button"
           type="button"
           class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
           data-carousel-next
@@ -1092,6 +1100,37 @@
             <span class="sr-only">Next</span>
           </span>
         </button>
+        <!-- Include your JavaScript code -->
+        <script>
+          var intervalId;
+
+          // Function to trigger button click
+          function clickButton() {
+            var button = document.getElementById("carousel-button");
+            button.click();
+          }
+
+          // Click the button initially
+          clickButton();
+
+          // Automatically click the button every 5 seconds
+          function startClicking() {
+            intervalId = setInterval(clickButton, 3000);
+          }
+
+          startClicking();
+
+          // Pause clicking when header is hovered
+          var header = document.getElementById("carousel-header");
+          header.addEventListener("mouseover", function () {
+            clearInterval(intervalId);
+          });
+
+          // Resume clicking when header hover is removed
+          header.addEventListener("mouseout", function () {
+            startClicking();
+          });
+        </script>
       </div>
       <!-- Banner End  ------------------------------------------------------------------->
     </header>
@@ -2084,7 +2123,9 @@
           class="services col-span-2 flex flex-row justify-between rounded-lg"
         >
           <div class="Content flex flex-col">
-            <h3 class="title text-lg m-4" style="margin-left: 25px;" >Resources</h3>
+            <h3 class="title text-lg m-4" style="margin-left: 25px">
+              Resources
+            </h3>
             <a class="py-4 px-6 text-sm" target="_blank" href=""
               >Library User Guide (BLC)</a
             >
@@ -2105,7 +2146,9 @@
           </div>
 
           <div class="Content flex flex-col">
-            <h3 class="title text-lg m-4" style="margin-left: 25px;" >Services</h3>
+            <h3 class="title text-lg m-4" style="margin-left: 25px">
+              Services
+            </h3>
             <a class="py-4 px-6 text-sm" target="_blank" href="">Item Renew</a>
             <a class="py-4 px-6 text-sm" target="_blank" href=""
               >Literacy Classes</a
