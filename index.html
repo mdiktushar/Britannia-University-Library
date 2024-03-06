@@ -901,7 +901,7 @@
       </div>
       <!-- Nav Bar End  ------------------------------------------------------------------->
       <!-- Banner Start  ------------------------------------------------------------------->
-      <div id="carousel-header">
+      <div id="carousel-header" class="z-20">
         <div
           id="default-carousel"
           class="relative w-full banner"
@@ -1103,9 +1103,9 @@
             // Click the button initially
             clickButton();
 
-            // Automatically click the button every 2.5 seconds
+            // Automatically click the button every  seconds
             function startClicking() {
-              intervalId = setInterval(clickButton, 5000);
+              intervalId = setInterval(clickButton, 10000);
             }
 
             startClicking();
